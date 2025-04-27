@@ -174,6 +174,7 @@ export const login = async (userData: LoginSchema) => {
     })
 
     return {
+        userId: existingUser.id,
         userName: existingUser.userName,
         accesToken: accessToken,
         refreshToken: refreshToken,
