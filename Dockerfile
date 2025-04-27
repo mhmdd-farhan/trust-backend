@@ -2,6 +2,9 @@
 # Oven is the company name, the creator of Bun
 FROM oven/bun:debian
 
+# Command to handle openssl
+RUN apt-get update && apt-get install -y openssl
+
 # Create and change to the app directory
 WORKDIR /usr/src/app
 
